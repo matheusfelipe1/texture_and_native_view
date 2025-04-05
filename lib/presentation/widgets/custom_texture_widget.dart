@@ -24,7 +24,7 @@ class _CustomTextureWidgetState extends State<CustomTextureWidget> {
     ).writeAsBytes(videoAsset.buffer.asUint8List());
 
     return _channel
-        .invokeMethod<int>("getTextureId", file.path)
+        .invokeMethod<int>("getTextureId", {"path": file.path})
         .then((value) => value ?? -1);
   }
 

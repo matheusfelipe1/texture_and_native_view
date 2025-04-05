@@ -34,7 +34,7 @@ import UIKit
         textureChannel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) in
             switch call.method {
                 case self.getTextureId:
-                if let path = call.arguments as? String {
+                if let path = call.arguments["path"] as? String {
                     let url = URL(fileURLWithPath: path)
                     
                     guard let textureRegistry = self.pluginRegistrar?.textures() else {
