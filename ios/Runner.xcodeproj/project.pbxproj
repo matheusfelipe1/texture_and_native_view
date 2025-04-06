@@ -13,6 +13,8 @@
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		8591E0252DA1932D00D2CC81 /* TextureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8591E0242DA1932700D2CC81 /* TextureView.swift */; };
+		8591E0292DA1EFF400D2CC81 /* NativeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8591E0282DA1EFEE00D2CC81 /* NativeViewFactory.swift */; };
+		8591E02B2DA1F0A900D2CC81 /* NativeVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8591E02A2DA1F09F00D2CC81 /* NativeVideoView.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
@@ -56,6 +58,8 @@
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
 		7D381B13F97AF15A13AD200E /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8591E0242DA1932700D2CC81 /* TextureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureView.swift; sourceTree = "<group>"; };
+		8591E0282DA1EFEE00D2CC81 /* NativeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeViewFactory.swift; sourceTree = "<group>"; };
+		8591E02A2DA1F09F00D2CC81 /* NativeVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeVideoView.swift; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
 		97C146EE1CF9000F007C117D /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,8 +120,24 @@
 				197163A46EF8CA2E5F1A6A4C /* Pods-RunnerTests.release.xcconfig */,
 				A9198376D3F77BB3024411AF /* Pods-RunnerTests.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8591E0262DA1EF9800D2CC81 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				8591E0242DA1932700D2CC81 /* TextureView.swift */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		8591E0272DA1EFA300D2CC81 /* NativeView */ = {
+			isa = PBXGroup;
+			children = (
+				8591E02A2DA1F09F00D2CC81 /* NativeVideoView.swift */,
+				8591E0282DA1EFEE00D2CC81 /* NativeViewFactory.swift */,
+			);
+			path = NativeView;
 			sourceTree = "<group>";
 		};
 		9740EEB11CF90186004384FC /* Flutter */ = {
@@ -155,7 +175,8 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				8591E0242DA1932700D2CC81 /* TextureView.swift */,
+				8591E0272DA1EFA300D2CC81 /* NativeView */,
+				8591E0262DA1EF9800D2CC81 /* Texture */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -380,8 +401,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8591E0292DA1EFF400D2CC81 /* NativeViewFactory.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+				8591E02B2DA1F0A900D2CC81 /* NativeVideoView.swift in Sources */,
 				8591E0252DA1932D00D2CC81 /* TextureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
